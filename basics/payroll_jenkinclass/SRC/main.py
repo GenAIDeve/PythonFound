@@ -6,3 +6,8 @@ def create_app():
     app = Flask(__name__)
     CORS(app)
     return app
+
+def create_app():
+    app = Flask(__name__)
+    CORS(app)
+    return app
