@@ -2,26 +2,26 @@
 This module will have information about bus types that atre used for booking 
 
     """
-from ticketing.base.seat import Seat
-class Bus:
+from ticketing.base.bookable import Bookable
+class Bus(Bookable):
     """
     This represents a bus during tickets booking
     """
 
-def __init__(self , Operator, name, registration_number,category):
-    """
+    def __init__(self , Operator, name, registration_number,category):
+        """
         This is initializer for the bus
-    Args: 
+        Args: 
          operator (str): bus operator like APSRTC, TSRTC(buses),orange 
          name(str): vehicle number
          registratio_number(str): registration number
-    """
+        """
     self.operator =Operator
     self.name= name
     self.registration_number=registration_number
     self.seats=dict()
 
-    def set_seats(self,count,prefix,rows):
+    def set_seats(self,rows,columns):
         """
         This creates the default seat structure
         Args:
