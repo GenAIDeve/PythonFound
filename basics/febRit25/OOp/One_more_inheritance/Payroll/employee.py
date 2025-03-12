@@ -12,4 +12,12 @@ class Employee:
         effective_salary = effective_monthly - (absent_days* effective_salary())
         effective_salary-= self.pf/12
         return effective_salary
-    
+class FulltimeEmployee(Employee):
+    def __init__(self, emp_id,base_salary, pf):
+        self.__init__(self, emp_id,base_salary, 0)
+        super.__init__(emp_id)    
+
+
+class ContractEmployee(Employee):
+    def __init__(self, emp_id,base_salary, pf):    
+        super().__init__( emp_id,base_salary, 0)
