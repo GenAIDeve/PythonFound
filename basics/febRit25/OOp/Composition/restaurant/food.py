@@ -29,7 +29,7 @@ class menu:
         """Get all items of menu
         """
         for item in self.items:
-            print(item)
+            print(f"{self.name},{self.price},{self.category}")
 
 
             
