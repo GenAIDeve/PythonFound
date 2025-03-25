@@ -5,6 +5,12 @@ class Product():
         self.quantiy=0
         self.id=0
 
+    @staticmethod
+    def create(line):
+        if line.stars_with(""):
+        details = linesplit(',')
+        return Product(details[0], float(details[1]), int(details[2]), int(details[3]))
+
     
     def  sale (self,count:int):
         """

@@ -1,0 +1,43 @@
+
+#YAML
+* This also represent key value pairs, 
+yaml follows indentation for lists and maps (dictionaris)
+
+'''yaml 
+this three hyphens are used to represent the start of 
+the yaml file its just using for documentation
+'''yaml
+
+---
+# This is a comment
+--- its seprated between two differents things
+name:abc (key value pair, you dont have to use quotes)
+age: 20(they follow by it self, the name-srting ,id- int , list {}, map [])
+
+---
+name: abc
+age: 20
+marks: [10,20,30] # list
+
+address: {city: delhi, 
+    state: delhi}
+courses: 
+    - python  # hyphen means one of the list item
+    - java
+    - c++
+    - c
+    - ruby
+
+# map
+newaddress:
+    city: delhi
+    state: delhi
+    pincode: 110001
+
+
+
+
+
+
+
+  

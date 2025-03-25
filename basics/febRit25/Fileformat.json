@@ -1,0 +1,19 @@
+# wellknown file format how to read and write json file
+# Json look exactly the same as python dictionary representations 
+
+
+# json 
+"name": "John",
+"age": 30,  
+"city": "New York"
+"address": {
+"street": "5th Avenue",
+"zip": "10021"
+},
+newaddress": {
+"street": "5th Avenue",
+"zip": "10021"
+}
+"courses": ["Math", "Science", "English"]
+
+

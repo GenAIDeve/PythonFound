@@ -1,6 +1,6 @@
-    """This module will be entry poinyt of the app
+    """This module will be entry poinyt of the app"""
 
-    """
+
 from models.product import Product
 
 
@@ -56,7 +56,33 @@ def sell_item():
     quantity = int(input("Enter the item for sales:  "))
     Product = inventory[id]
     Product.sale(quantity)
+    inventory[id] = Product
 
- sell_item()
+def load():
+    """this method will load the inventory from a file"""
+    with open('inventory.csv',"r") as inventory_file:
+        for product in inventory_file.readlines()[1:]:
+            product = Product.create(product)
+            add_item_to_inventory(product)
+            if product is not None:
+                add_item_to_inventory(Product)
+sell_item()
     print(inventory)
 
+def save():
+    """"this method will save theq inventory to a file"""
+    with open('inventory.txt', 'w') as inventory_file:
+        inventory_file.write("id,name,price,quantity \n")
+        for product in inventory.values():
+            inventory_file.write(f"{product.id},{product.name},{product.price},{product.quantity}\n")
+
+if __name__ == '__main__':
+    create_inventory(add_item_to_inventory)
+    save()
+    sell_item()
+    save()
+
+    #writing to a file
+    for id,product in inventory.items():
+        with open ('inventory","W") as file:
+            file.write(str(product))
